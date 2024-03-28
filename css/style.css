@@ -34,10 +34,31 @@
 .menu h1{
     font-family: 'poppins',sans-serif;
     font-weight: 600;
+    color: #F2F2F2;
 }
 
 .menu span{
     font-family: 'poppins',sans-serif;
     font-weight: 300;
     font-size: 10px;
+    color: #13F2F2;
+}
+
+.menu ul{
+    list-style: none;
+    color: #F2F2F2;
+    display: flex;
+ 
+}
+
+.menu li{
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+    margin-left: 5rem;
+}
+.menu li:hover{
+    color: #13F2F2;
+    transition: 0.5s;
+    cursor: pointer;
+    scale: 1.1;
 }
