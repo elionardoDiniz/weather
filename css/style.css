@@ -75,7 +75,7 @@ html,body{
 .formulario{
     color: #F2F2F2;
     background-color: #0B1726;
-    width: 35rem;
+    width: 30%;
     height: 100%;
     position:absolute;
     left: 0px;
@@ -100,16 +100,21 @@ html,body{
     font-family: 'poppins',sans-serif;
     font-weight: 600;
     border: 0px;
-    padding: 0.4rem;
     background-color: #13F2F2;
     cursor: pointer;
-    height: 2rem;
+    font-size: 20px;
+    padding: 0.5rem;
 }
 
 .formulario input{
     border: 0px;
+    padding: 0.5rem;
     width: 20rem;
-    height: 2rem;
+    height: 40%;
+    font-family: 'poppins',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: #F2F2F2;
 }
 
 #logo span{
@@ -127,4 +132,30 @@ html,body{
 
 #logo{
     margin-bottom: 10rem;
+}
+
+.clima-infos{
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.temperatura{
+    font-family: 'poppins',sans-serif;
+    font-weight: 300;
+    background-color: #111D40;
+}
+
+.cidade{
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #111D40;
 }
