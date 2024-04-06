@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:'poppins',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,4 +14,138 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+
+
+:root{
+  --primary-color: #111D40;
+  --secondary-color: #0B1726;
+  --tertiary-color: #038C8C;
+  --quaternary-color: #13F2F2;
+  --quinary-color: #F2F2F2;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(2px + 2vmin);
+  color: white;
+}
+
+
+html{
+  height: 100vh
+}
+
+.header span{
+  color: var(--quaternary-color);
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.header p{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--quaternary-color);
+}
+
+.cityForm{
+  background-color: var(--quinary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 10vh;
+  font-size: calc(7px + 1vmin)
+}
+
+.cityForm input{
+  border: 0px;
+  margin: 1em;
+  text-align: center;
+  height: 4vh;
+  width: auto;
+  min-width: 1vh;
+  font-size: auto;
+  border-radius: 0.5rem;
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: px;
+}
+
+.cityForm button{
+  cursor: pointer;
+  border: 0px;
+  padding: auto;
+  margin: 1em;
+  text-align: center;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--tertiary-color);
+  color: var(--quaternary-color);
+  font-size: auto;
+  font-weight: 600;
+  font-family: 'poppins',sans-serif;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cityForm button:hover{
+  transition: 0.7s;
+  box-shadow: rgba(9, 219, 191, 0.7) 0px 7px 29px 0px;
+  transform: scale(1.1);
+}
+
+.cardWeather{
+  background-color: var(--quinary-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  width: 400px;
+  border-radius: 1.5rem;
+  font-size: calc(7px + 1vmin)
+}
+
+.cardWeather ul{
+  list-style: none;
+  text-align: left;  
+
+}
+
+.card-temperature{
+  font-size: 5rem;
+  font-weight: 600;
+  font-family: 'poppins',sans-serif;
+  color: var(--tertiary-color);
+}
+
+i{
+
+  color: var(--tertiary-color);
+}
+
+.cityWeather{
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#celcius{
+  font-size: 20px;
 }
