@@ -61,6 +61,7 @@ const WeatherApp = (props) => {
               description:data.weather[0].description,
               icon:data.weather[0].icon,
               feelLike:data.main.feels_like
+
           })
           console.log(data);
           }
