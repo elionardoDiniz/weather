@@ -109,12 +109,12 @@ html{
 }
 
 .cardWeather{
-  background-color: var(--quinary-color);
+  background-color: var(--secondary-color);
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: var(--quinary-color);
   height: auto;
   width: 400px;
   border-radius: 1.5rem;
@@ -131,12 +131,12 @@ html{
   font-size: 5rem;
   font-weight: 600;
   font-family: 'poppins',sans-serif;
-  color: var(--tertiary-color);
+  color: var(--quaternary-color);
 }
 
 i{
 
-  color: var(--tertiary-color);
+  color: var(--quaternary-color);
 }
 
 .cityWeather{
