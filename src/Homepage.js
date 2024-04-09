@@ -7,7 +7,7 @@ import './index.css';
 import WelcomeMenssage from "./components/layout/WelcomeMenssage";
 
 
-function Homepage() {
+const Homepage = () => {
   return (
     <div>
       <Header time={<Clock />} />
@@ -15,14 +15,11 @@ function Homepage() {
             <Link className="nav-item"  to="/clima"><i class="fa-solid fa-cloud-sun-rain"></i> Clima Agora</Link>
             <Link className="nav-item"  to="/noticias"><i class="fa-solid fa-newspaper"> </i>  Noticias</Link>
       </nav>
-      <Homepage />
         <Routes>
             <Route path="/clima" element={<WeatherApp />} ></Route>
+            <Route path="/" element={<WelcomeMenssage />} ></Route>
             <Route path="/noticias" element={<News/>} ></Route>
         </Routes>
-      <div>
-        <WelcomeMenssage />
-      </div>
     </div>
   );
 };

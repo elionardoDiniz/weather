@@ -1,13 +1,11 @@
 import "./index.css";
 import { useState } from "react";
-import Header from "./components/layout/Header";
 import Card from "./components/layout/card";
 
 
-import Clock from "./components/layout/clock";
 
-const WeatherApp = (props) => {
-  
+function WeatherApp(props) {
+
 
   const handleChange = (i) => {
     setInputCity(i.target.value, i.target.value);
@@ -16,10 +14,9 @@ const WeatherApp = (props) => {
   let [inputCity, setInputCity] = useState("");
 
   const apiKey = "89691b7988191828a4db7969d42b6cfd";
-  let display = "none";
 
   const [weather, setWeather] = useState({
-    name: "?",
+    name: "Estados Unidos",
     wind: 0,
     humidity: 0,
     temperature: 0,
@@ -31,7 +28,6 @@ const WeatherApp = (props) => {
   });
 
   const getWeatherData = async () => {
-    const city = setInputCity(inputCity);
     if (inputCity === "") {
       alert("Please enter city name");
       return;
@@ -64,7 +60,7 @@ const WeatherApp = (props) => {
 
   return (
     <>
-      
+
       <div className="cityForm">
         <h1>Como está o Clima em </h1>
         <input
@@ -78,7 +74,7 @@ const WeatherApp = (props) => {
           onClick={(e) => {
             e.preventDefault();
             getWeatherData();
-          }}
+          } }
         >
           Consultar
         </button>
@@ -95,11 +91,10 @@ const WeatherApp = (props) => {
           humidity={weather.humidity}
           visibility={weather.visibility}
           minTemp={weather.minTemp}
-          maxTemp={weather.maxTemp}
-        />
+          maxTemp={weather.maxTemp} />
       </div>
     </>
   );
-};
+}
 
 export default WeatherApp;
