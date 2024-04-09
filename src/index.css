@@ -57,7 +57,7 @@ html{
 .header p{
   font-size: 1.5rem;
   font-weight: 300;
-  color: var(--quaternary-color);
+  color: var(--quinary-color);
 }
 
 .cityForm{
