@@ -6,6 +6,7 @@ return(
                 <ul>
                     <li>
                     <h1 className="card-temperature" >{Math.floor(props.temperature)}  <i class="fa-solid fa-temperature-low"></i></h1>
+                    <p><i class="fa-solid fa-chevron-up"></i>  {Math.floor(props.maxTemp)}°  <i class="fa-solid fa-chevron-down"></i>  {Math.floor(props.minTemp)}° </p>
                     </li>
                     <li>
                         <h3 >{props.sky}</h3>

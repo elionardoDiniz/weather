@@ -2,16 +2,12 @@ import "./index.css";
 import { useState } from "react";
 import Header from "./components/layout/Header";
 import Card from "./components/layout/card";
-import { toBeVisible } from "@testing-library/jest-dom/matchers";
+
+
+import Clock from "./components/layout/clock";
 
 const WeatherApp = (props) => {
-  let time = new Date().toLocaleTimeString();
-  const [ctime, setTime] = useState(time);
-  const UpdateTime = () => {
-    let time = new Date().toLocaleTimeString();
-    setTime(time);
-  };
-  setInterval(UpdateTime);
+  
 
   const handleChange = (i) => {
     setInputCity(i.target.value, i.target.value);
@@ -23,7 +19,7 @@ const WeatherApp = (props) => {
   let display = "none";
 
   const [weather, setWeather] = useState({
-    name: "Americana",
+    name: "?",
     wind: 0,
     humidity: 0,
     temperature: 0,
@@ -55,6 +51,8 @@ const WeatherApp = (props) => {
           icon: data.weather[0].icon,
           feelLike: data.main.feels_like,
           weather: data.weather[0].main,
+          maxTemp: data.main.temp_max,
+          minTemp: data.main.temp_min,
         });
         console.log(data);
       } catch {
@@ -66,7 +64,7 @@ const WeatherApp = (props) => {
 
   return (
     <>
-      <Header time={ctime} />
+      
       <div className="cityForm">
         <h1>Como está o Clima em </h1>
         <input
@@ -96,6 +94,8 @@ const WeatherApp = (props) => {
           wind={weather.wind}
           humidity={weather.humidity}
           visibility={weather.visibility}
+          minTemp={weather.minTemp}
+          maxTemp={weather.maxTemp}
         />
       </div>
     </>
