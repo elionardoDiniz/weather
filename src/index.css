@@ -7,8 +7,6 @@ body {
   margin: 0;
   font-family:'poppins',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   height: 100vh;
 }
 
@@ -17,6 +15,9 @@ code {
     monospace;
 }
 
+*{
+  font-family: 'poppins',sans-serif;
+}
 
 
 
@@ -42,8 +43,29 @@ code {
   justify-content: space-around;
   font-size: calc(2px + 2vmin);
   color: white;
+  
 }
 
+/* HTML: <div class="loader"></div> */
+.loader-inner {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #000 #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
+
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: 2;
+}
 
 html{
   height: 100vh
@@ -231,5 +253,32 @@ a{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+}
+
+.carouselTextColor{
+  color: var(--quaternary-color);
+  font-family: 'poppins',sans-serif;
+  background-color: #0B1726;
+  padding: 15px;
+}
+
+.carouselTextColor h1{
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--quaternary-color);
+}
+
+.saibaMaisButton{
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  width: auto;
+  color: var(--quaternary-color);
+  background-color: var(--primary-color);
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
 
 }
