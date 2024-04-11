@@ -75,12 +75,19 @@ html{
   color: var(--quaternary-color);
   font-size: 0.7rem;
   font-weight: 300;
+  font-family: 'poppins',sans-serif;
+  
 }
 
 .header p{
   font-size: 1.5rem;
   font-weight: 300;
   color: var(--quinary-color);
+  font-family: 'poppins',sans-serif;
+}
+
+.header{
+  font-family: 'poppins',sans-serif;
 }
 
 .cityForm{
@@ -218,7 +225,7 @@ i{
   font-weight: 600;
   font-size: 1rem;
   color: var(--quaternary-color);
- 
+  text-decoration: none;
   margin-right: 50px;
 }
 
@@ -256,19 +263,6 @@ a{
 
 }
 
-.carouselTextColor{
-  color: var(--quaternary-color);
-  font-family: 'poppins',sans-serif;
-  background-color: #0B1726;
-  padding: 15px;
-}
-
-.carouselTextColor h1{
-  font-family: 'poppins',sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--quaternary-color);
-}
 
 .saibaMaisButton{
   font-family: 'poppins',sans-serif;
@@ -281,4 +275,79 @@ a{
   border-radius: 10px;
   text-decoration: none;
 
+}
+
+.carouselCaptionBg{
+  padding: 10px;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+  background: rgba(36, 36, 36, 0.5);
+}
+
+.carouselCaptionBg p{
+
+  font-family: 'poppins',sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--quinary-color);
+  width: 100%;
+}
+
+.carouselCaptionBg h5{
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--quaternary-color);
+  width: 100%;
+
+}
+
+.newsList{
+  list-style: none;
+}
+
+.newsList h1{
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--quaternary-color);
+  width: 100%;
+}
+
+.newsList li h2{
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-color);
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.newsList a{
+  text-decoration: none;
+}
+
+.newsLits a:hover li{
+  color: var(--quaternary-color);
+  transition: 0.7s;
+  transform: scale(1.1);
+}
+
+.newsList li p{
+  font-family: 'poppins',sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--secondary-color);
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.carousel-inner{
+  
+}
+
+.item, img{
+  height: auto !important;
+  width:  auto !important;
 }

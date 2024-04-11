@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import createUtilityClassName from "react-bootstrap/esm/createUtilityClasses";
 
 const News = () => {
   const [articles, setArticles] = useState([]);
@@ -12,7 +13,7 @@ const News = () => {
     const fetchArticles = async () => {
       try {
         const apiKey = "ed0ee08d5ad243069218b7efeedd62cb";
-        const url = `https://newsapi.org/v2/everything?q=clima&from=2024-04-10&pageSize=6&language=pt&apiKey=${apiKey}`;
+        const url = `https://newsapi.org/v2/everything?q=meteorologia&sortBy=publishedAt&pageSize=6&language=pt&apiKey=${apiKey}`;
         
         const response = await fetch(url);
         if (!response.ok) {
@@ -44,13 +45,39 @@ const News = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              { article.title && <h5 className="carouselTextColor" >{article.title}</h5>};
-              { article.description && <p className="carouselTextColor" >{article.description}</p>}
+              <div className="carouselCaptionBg" >
               { article.source && <p >{article.source.name}</p>}
+              { article.title && <h5 className="carouselTextColor" >{article.title}</h5>}
+              { article.description && <p className="carouselTextColor" >{article.description}</p>}
+              </div>
+              
             </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
+      
+      <ul className="newsList" >
+      <hr></hr>
+      <h1 >Noticias</h1>
+      {
+        articles.map((article, index) => (
+
+          <li>
+            {article.content && <hr></hr>}
+            <Link to={article.url} >
+              
+              {article.title && <h2>{article.title}</h2>}
+              {article.description && <p>{article.description}</p>}
+
+            
+            </Link>
+            
+          </li>
+  
+        ))
+      }
+      </ul>
+      
     </Container>
       
     
