@@ -343,11 +343,8 @@ a{
   margin-bottom: 30px;
 }
 
-.carousel-inner{
-  
-}
 
-.item, img{
-  height: auto !important;
+.item img{
+  height: 70vh !important;
   width:  auto !important;
 }
