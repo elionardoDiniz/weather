@@ -220,6 +220,15 @@ i{
   text-align: left;
 }
 
+.card-title{
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--quaternary-color);
+  margin-bottom: 50px;
+  padding:30px;
+}
+
 .nav-item{
   font-family: 'poppins',sans-serif;
   font-weight: 600;
@@ -227,6 +236,14 @@ i{
   color: var(--quaternary-color);
   text-decoration: none;
   margin-right: 50px;
+}
+
+.nav-item h1{
+  font-family: 'poppins',sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--quaternary-color);
+  text-decoration: none;
 }
 
 nav a:hover{
@@ -258,7 +275,7 @@ a{
   width: 100%;
   height: 90vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: left;
   align-items: center;
 
 }
@@ -343,8 +360,25 @@ a{
   margin-bottom: 30px;
 }
 
-
-.item img{
-  height: 70vh !important;
-  width:  auto !important;
+.carousel-inner img{
+  height: 80vh ;
+  width: auto ;
 }
+
+.newsTitle{
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--secondary-color);
+  width: 100%;
+  background-color: var(--quinary-color);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.newsTitle i{
+  color: var(--secondary-color);
+}
+
+
