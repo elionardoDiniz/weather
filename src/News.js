@@ -20,6 +20,9 @@ const News = () => {
           throw new Error("Falha ao carregar os dados");
         }
         const data = await response.json();
+        data.articles.map(article => {
+          article.content = article.content.substring(0, 200);
+        });
         setArticles(data.articles);
       } catch (error) {
         console.error("Erro ao carregar notícias:", error.message);
@@ -68,8 +71,9 @@ const News = () => {
             <li>
               {article.content && <hr></hr>}
               <Link to={article.url}>
+                {article.source && <h6>{article.source.name}</h6>}
                 {article.title && <h2>{article.title}</h2>}
-                {article.description && <p>{article.description}</p>}
+                {article.content && <p>{article.content}</p>}
               </Link>
             </li>
           ))}

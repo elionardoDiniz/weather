@@ -323,6 +323,12 @@ a{
   list-style: none;
 }
 
+.newsList h6{
+  margin-top: 24px;
+  margin-left: 20px;
+  text-transform: lowercase;
+}
+
 .newsList h1{
   font-family: 'poppins',sans-serif;
   font-weight: 600;
@@ -345,19 +351,26 @@ a{
   text-decoration: none;
 }
 
-.newsLits a:hover li{
+.newsList a:hover li{
   color: var(--quaternary-color);
   transition: 0.7s;
   transform: scale(1.1);
 }
 
+.newsList a:hover{
+  text-decoration: underline black;
+  color: var(--quaternary-color);
+}
+.newsList a:hover h2{
+  color: var(--secondary-color);
+}
 .newsList li p{
   font-family: 'poppins',sans-serif;
   font-weight: 300;
   font-size: 20px;
   color: var(--secondary-color);
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .carousel-inner img{
