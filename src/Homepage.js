@@ -13,10 +13,11 @@ const Homepage = () => {
   return (
     <div>
       <Header time={<Clock />} />
-      <nav >
+      <nav>
+            <Link className="nav-item"  to="/"><i class="fa-solid fa-home"></i> Home</Link>
             <Link className="nav-item"  to="/clima"><i class="fa-solid fa-cloud-sun-rain"></i> Clima Agora</Link>
             <Link className="nav-item"  to="/noticias"><i class="fa-solid fa-newspaper"> </i>  Noticias</Link>
-      </nav>
+    </nav>
         <Routes>
             <Route path="/clima" element={<WeatherApp />} ></Route>
             <Route path="/" element={<WelcomeMenssage />} ></Route>
