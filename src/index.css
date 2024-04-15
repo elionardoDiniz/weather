@@ -103,38 +103,34 @@ html{
 }
 
 .cityForm input{
-  border: 0px;
+  border: 0;
   margin: 1em;
   text-align: center;
   height: 4vh;
   width: auto;
   min-width: 1vh;
-  font-size: auto;
   border-radius: 0.5rem;
   font-family: 'poppins',sans-serif;
   font-weight: 600;
-  font-size: px;
 }
 
 .cityForm button{
+  border: 0;
   cursor: pointer;
-  border: 0px;
-  padding: auto;
   margin: 1em;
   text-align: center;
   height: 3rem;
   border-radius: 0.5rem;
   background-color: var(--tertiary-color);
   color: var(--quaternary-color);
-  font-size: auto;
   font-weight: 600;
   font-family: 'poppins',sans-serif;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
 .cityForm button:hover{
   transition: 0.7s;
-  box-shadow: rgba(9, 219, 191, 0.7) 0px 7px 29px 0px;
+  box-shadow: rgba(9, 219, 191, 0.7) 0 7px 29px 0;
   transform: scale(1.1);
 }
 
@@ -166,7 +162,6 @@ html{
   color: var(--quaternary-color);
   justify-content: center;
   align-items: center;
-  display: flexbox;
 }
 
 i{
@@ -204,13 +199,11 @@ i{
 }
 
 .card-info li{
-  height: auto;
   padding: 1em;
   width: auto;
   border-radius: 1.5rem;
   font-family: 'poppins',sans-serif;
   background-color: var(--tertiary-color);
-  margin-bottom: 5px;
   color: var(--quinary-color);
   font-weight: 600;
   margin-bottom: 15px;
@@ -267,19 +260,32 @@ a{
   text-decoration: none;
 }
 
-.WelcomeMenssage{
+.WelcomeMenssageBg{
   font-family: 'poppins',sans-serif;
   font-weight: 600;
-  font-size: 1rem;
-  color: var(--primary-color);
   width: 100%;
   height: 90vh;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
+  background-size: cover ;
+  background-position:center center ;
 
 }
 
+
+  .WelcomeMenssage {
+  backdrop-filter: blur(5px);
+  padding: 10px;
+
+  color: #fff;
+  border-radius: 15px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+  .WelcomeMenssage h1{
+  font-size: 100px;
+}
 
 .saibaMaisButton{
   font-family: 'poppins',sans-serif;
@@ -340,7 +346,6 @@ a{
 .newsList li h2{
   font-family: 'poppins',sans-serif;
   font-weight: 600;
-  font-size: 1rem;
   color: var(--primary-color);
   width: 100%;
   font-size: 30px;

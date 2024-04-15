@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import createUtilityClassName from "react-bootstrap/esm/createUtilityClasses";
+
 
 const News = () => {
   const [articles, setArticles] = useState([]);
@@ -20,7 +19,7 @@ const News = () => {
           throw new Error("Falha ao carregar os dados");
         }
         const data = await response.json();
-        data.articles.map(article => {
+        data.articles.map((article) =>  {
           article.content = article.content.substring(0, 200);
         });
         setArticles(data.articles);
@@ -39,14 +38,14 @@ const News = () => {
   return (
     <>
       <h1 className="newsTitle">
-        <i class="fa-solid fa-newspaper"></i> Noticias
+        <i className="fa-solid fa-newspaper"></i> Noticias
       </h1>
       <Container>
         <Carousel heigh={"90vh"} theme="dark">
           {articles.map((article, index) => (
             <Carousel.Item key={index} link={article.url}>
               <img
-                class="carosuel"
+                id="carosuel"
                 className="d-block w-100   mh-100 d-inline-block img-fluid mh-100 "
                 src={article.urlToImage}
                 alt="First slide"
