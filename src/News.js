@@ -69,7 +69,7 @@ const News = () => {
           {articles.map((article, index) => (
             <li>
               {article.content && <hr></hr>}
-              <Link to={article.url}>
+              <Link target="_blank" to={article.url}>
                 {article.source && <h6>{article.source.name}</h6>}
                 {article.title && <h2>{article.title}</h2>}
                 {article.content && <p>{article.content}</p>}

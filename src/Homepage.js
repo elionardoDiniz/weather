@@ -17,7 +17,7 @@ const Homepage = () => {
         const fetchImage = async () => {
             try {
                 let randomNumber = Math.floor(Math.random() * 10)
-                return fetch(`https://api.unsplash.com/search/photos?&query=brasil&client_id=${ApiKey}`)
+                return fetch(`https://api.unsplash.com/search/photos?&query=brasil%20nature&client_id=${ApiKey}`)
                                 .then((response) =>
                                     response.json()
                                     )
@@ -53,7 +53,7 @@ const Homepage = () => {
                 mensagem = "Boa noite!"
             }
             return (
-                <div className="WelcomeMenssageBg" style={{backgroundImage: `url('${image.ImageUrl}')`}}>
+                <div className="WelcomeMenssageBg" style={{backgroundImage: `linear-gradient(#111D40, #111D40), url('${image.ImageUrl}')`}}>
                     <p>{image.title}</p>
                     <div className="WelcomeMenssage" >
                         <h1> {mensagem}</h1>
