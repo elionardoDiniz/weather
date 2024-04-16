@@ -17,7 +17,7 @@ const Homepage = () => {
         const fetchImage = async () => {
             try {
                 let randomNumber = Math.floor(Math.random() * 10)
-                return fetch(`https://api.unsplash.com/search/photos?&query=brasil%20nature&client_id=${ApiKey}`)
+                return fetch(`https://api.unsplash.com/search/photos?&query=brazil&client_id=${ApiKey}`)
                                 .then((response) =>
                                     response.json()
                                     )

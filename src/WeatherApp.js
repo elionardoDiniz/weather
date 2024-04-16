@@ -45,6 +45,7 @@ function WeatherApp() {
       alert(error.message);
     } finally {
       setLoading(false);
+      setInputCity('')
     }
   };
 
