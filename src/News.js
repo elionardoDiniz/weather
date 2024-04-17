@@ -12,7 +12,7 @@ const News = () => {
     const fetchArticles = async () => {
       try {
         const apiKey = "f27fe093a4d645c7a14a319a43159c82";
-        const url = `https://newsapi.org/v2/everything?q=meteorologia&sortBy=publishedAt&pageSize=9&language=pt&apiKey=${apiKey}`;
+        const url = `https://newsapi.org/v2/everything?q=meteorologia&sortBy=publishedAt&pageSize=10&language=pt&apiKey=${apiKey}`;
 
         const response = await fetch(url);
         if (!response.ok) {
